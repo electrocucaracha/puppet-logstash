@@ -1,0 +1,12 @@
+input {
+  redis {
+    host => "<%= @redis_host %>"
+    data_type => "list"
+    key => "logstash"
+  }
+}
+output {
+  elasticsearch {
+    host => "<%= @elasticsearch_host %>"
+  }
+}
